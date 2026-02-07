@@ -101,3 +101,30 @@ Accuracy is very high mainly because 99.83% of transactions are non-fraud, so ac
   - Focus on strong features such as V14, V12, V17 (and possibly V10, V16) in feature engineering.
 - **Target for Week 2**:
   - Recall > 75% for fraud, while keeping precision > 80%.
+
+\#\#\ Model\ Performance\ Evolution\
+\
+\|\ Model\ \|\ Precision\ \(Fraud\)\ \|\ Recall\ \(Fraud\)\ \|\ F1\ \(Fraud\)\ \|\ ROC‑AUC\ \|\
+\|-------\|-------------------\|----------------\|------------\|---------\|\
+\|\ Tuned\ RF\ Baseline\ \|\ 0.8791\ \|\ 0.8163\ \|\ \*\*0.8466\*\*\ \|\ 0.96\ \|\
+\|\ \*\*Final\ Pipeline\*\*\ \|\ \*\*0.8791\*\*\ \|\ \*\*0.8163\*\*\ \|\ \*\*0.8466\*\*\ \|\ \*\*0.96\*\*\ \|\
+\
+\#\#\#\ Best\ Model\:\ Random\ Forest\ Pipeline\
+\*\*F1\ Score\ \(Fraud\)\*\*\:\ \*\*0.8466\*\*\
+\
+\*\*Top\ Features\ \(from\ importance\)\*\*\:\
+-\ V14\ \(0.18\)\
+-\ V10\ \(0.11\)\ \
+-\ V4\ \(0.10\)\
+-\ V12\ \(0.09\)\
+\
+\*\*Engineered\ Features\ Added\*\*\:\
+-\ \`Amount_log\`\
+-\ \`Transaction_hour\`\
+-\ \`V14_V12_ratio\`\
+-\ \`V14_V17_interaction\`\
+\
+\*\*Model\ saved\*\*\:\ \`models/fraud_detection_pipeline.pkl\`\ \ \
+\*\*Ready\ for\ API\ deployment\!\*\*\ 🚀\
+\
+
